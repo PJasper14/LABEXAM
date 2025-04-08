@@ -1,0 +1,210 @@
+/* General styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Product card animation */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Product card quick view button */
+.product-card .position-relative:hover .position-absolute {
+  opacity: 0.9 !important;
+  pointer-events: auto !important;
+}
+
+.product-card .position-relative::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+  z-index: 1;
+}
+
+.product-card .position-relative:hover::before {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.product-card .position-absolute {
+  z-index: 2;
+}
+
+/* Fade animations for components */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom button styles */
+.btn-primary {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.btn-outline-primary {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-success:hover, .btn-outline-success:focus {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+/* Cart badge animation */
+.cart-badge {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Custom form controls */
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+  border-color: #28a745;
+}
+
+/* Header styles */
+.navbar-dark .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.bg-dark {
+  background-color: #1a8833 !important;
+}
+
+.bg-primary {
+  background-color: #28a745 !important;
+}
+
+.text-primary {
+  color: #28a745 !important;
+}
+
+/* Footer styles */
+footer {
+  margin-top: auto;
+  background-color: #1a8833;
+  color: white;
+}
+
+/* Admin panel styles */
+.admin-sidebar {
+  background-color: #218838;
+  color: white;
+  min-height: calc(100vh - 56px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Print styles for order receipt */
+@media print {
+  nav, footer, button, .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background-color: white;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Cursor styles */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Image gallery carousel styles */
+.image-gallery-carousel .carousel-control-prev,
+.image-gallery-carousel .carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 20px;
+}
+
+.image-gallery-carousel .carousel-indicators {
+  margin-bottom: 0;
+}
+
+.gallery-modal .modal-body {
+  background-color: #f8f9fa;
+}
+
+.gallery-modal .modal-content {
+  background-color: #f8f9fa;
+}

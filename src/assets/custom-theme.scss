@@ -1,0 +1,52 @@
+// Override Bootstrap variables for green theme
+$primary: #28a745;
+$success: #28a745;
+$info: #1e7e34;
+$secondary: #6c757d;
+$dark: #1a8833;
+$light: #f8f9fa;
+$white: #ffffff;
+
+$theme-colors: (
+  "primary": $primary,
+  "success": $success,
+  "info": $info,
+  "secondary": $secondary,
+  "dark": $dark,
+  "light": $light,
+  "white": $white
+);
+
+// Import Bootstrap to apply overrides
+@import "~bootstrap/scss/bootstrap";
+
+// Additional custom styles for green theme
+.bg-success-light {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.text-success-light {
+  color: #28a745;
+}
+
+.card-accent-success {
+  border-top: 3px solid #28a745;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.badge-success {
+  background-color: #28a745;
+}
+
+.table-success {
+  background-color: rgba(40, 167, 69, 0.1);
+} 
